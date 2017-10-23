@@ -8,8 +8,8 @@
     # note: (theta=k/alpha)
     # r = censoring weight, defined in mle function's environment
     k = function(theta0){
-      if (!exists('r', envir = parent.frame()))){stop("this function is being run outside of the mother's function 'mle'")}
-      r = get('r', envir = parent.frame()))
+      if (!exists('r', envir = parent.frame())){stop("this function is being run outside of the mother's function 'mle'")}
+      r = get('r', envir = parent.frame())
       with(parent.frame(),
         return(-1/r*sum(log(1-theta0*x)))
       )
