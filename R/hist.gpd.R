@@ -1,7 +1,6 @@
 #' Histogram with fit of GPD density function
 #'
 #' creates a plot of the data set's histogram and the fitted GPD density function
-#' @import  graphics histogram
 #' @param time Time to failure or termination
 #' @param censor Observation/censor indicator (1=observed, 0=right-censored), default to be all observations
 #' @param k.hat optional, estimate of k, estimated by mle.gpd if either k.hat or a.hat is not given
