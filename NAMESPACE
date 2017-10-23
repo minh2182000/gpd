@@ -2,7 +2,9 @@
 
 S3method(hist,gpd)
 export(Htest.gpd)
+export(hist.gpd)
 export(mle.gpd)
 import(MASS)
 import(Matrix)
 import(graphics)
+import(histogram)
