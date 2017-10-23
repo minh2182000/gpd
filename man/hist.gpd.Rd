@@ -21,7 +21,7 @@
 \item{...}{further arguments passed to hist()}
 }
 \description{
-\code{hist.gpd} creates a plot of the data set's histogram and the fitted GPD density function
+creates a plot of the data set's histogram and the fitted GPD density function
 }
 \examples{
 data(melanoma, package = "boot")

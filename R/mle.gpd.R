@@ -27,14 +27,7 @@ mle.gpd=function(time, censor = rep(1, times = length(time))){
 				delta = delta[order]
 				x = x[order]
 				r = max(which(delta==1))
-		# load log-likelihood function and related functions------------------------------- ----
-				path = getwd()
-				source(paste(path, '/supporting scripts/Likelihood function and related functions.R', sep = ""),
-				       local = TRUE)
-		# load newton and bisection algorithms-------------------------------------------- ----
-				source(paste(path, '/supporting scripts/newton and bisection algorithms.R', sep = ""),
-				       local = TRUE)
-				
+
 		# Theta estimation ---------------------------------------------------- ----
   			 #1
 				epsilon = 10^-6/xbar

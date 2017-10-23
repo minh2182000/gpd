@@ -26,9 +26,6 @@
 #' @export
 
 Htest.gpd = function(time, censor, k.hat = NULL, a.hat = NULL){
-  path = getwd()
-  source(paste(path, '/supporting scripts/CDF and PDF.R', sep = ""),
-         local = TRUE)
   x = time; delta = censor
   if (is.null(k.hat) | is.null(a.hat)){
     warning("parameters not given, estimated with mle.gpd")
