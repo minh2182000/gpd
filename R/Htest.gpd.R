@@ -26,6 +26,7 @@
 #' @export
 
 Htest.gpd = function(time, censor, k.hat = NULL, a.hat = NULL){
+  pdf.gpd = supp$pdf.gpd; n_r = supp$n_r; lamda = supp$lamda; L = supp$L; k = supp$k; h_prime = supp$h_prime; h = supp$h; Clamda.inv = supp$Clamda.inv; Clamda = supp$Clamda; cdf.gpd = supp$cdf.gpd; bisection = supp$bisection; alpha = supp$alpha
   x = time; delta = censor
   if (is.null(k.hat) | is.null(a.hat)){
     warning("parameters not given, estimated with mle.gpd")
