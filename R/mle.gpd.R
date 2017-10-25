@@ -2,7 +2,7 @@
 #' 
 #' \code{mle.gpd} estimates parameters for Generalized Pareto	Distribution with right-censored data using Maximum Likelihood
 #' 
-#' @param time Time to failure or termination
+#' @param Time Time to failure or termination
 #' @param censor Observation/censor indicator (1=observed, 0=right-censored), default to be all observations
 #' 
 #' @return returns a vector of size 2. The first element is the estimate of k, the second is the estimate of alpha
@@ -17,10 +17,13 @@
 #' @examples mle.gpd(melanoma$time, status)
 #' @export
 
-mle.gpd=function(time, censor = rep(1, times = length(time))){
-	x=time ; delta=censor
-	n=length(time)
-	xbar = mean(time)
+mle.gpd=function(Time, censor = rep(1, Times = length(Time))){
+  pdf.gpd = supp$pdf.gpd; n_r = supp$n_r; lamda = supp$lamda; L = supp$L; k = supp$k; h_prime = supp$h_prime; h = supp$h; Clamda.inv = supp$Clamda.inv; Clamda = supp$Clamda; cdf.gpd = supp$cdf.gpd; bisection = supp$bisection; alpha = supp$alpha
+  environment(alpha) = environment(bisection) = environment(cdf.gpd) = environment(Clamda) = environment(Clamda.inv) = environment(h) = environment(h_prime) = environment(k) = environment(L) = environment(lamda) = environment(n_r) = environment(pdf.gpd) = environment()
+  x=Time
+  delta=censor
+	n=length(Time)
+	xbar = mean(Time)
 	options(digits=22)
 		# re-order x and delta for better expression of h(theta) (see the math)---------- ----
 				order = order(delta,decreasing=T)

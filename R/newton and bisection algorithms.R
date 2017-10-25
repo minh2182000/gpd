@@ -1,3 +1,5 @@
+if (!exists("supp")) {supp = new.env()}
+with(supp, {
 # Newton-Raphson Procedure for h(theta): n_r(initial) -------------------- ----
 n_r=function(initial){
   s0=initial
@@ -22,3 +24,5 @@ bisection=function(b1,b2){
   }
   return((b1+b2)/2)
 }
+
+})

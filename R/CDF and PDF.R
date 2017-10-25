@@ -1,3 +1,5 @@
+if (!exists("supp")) {supp = new.env()}
+with(supp, {
 #PDF
 pdf.gpd=function(x,k,alpha) {
   if (!k==0) {
@@ -41,3 +43,4 @@ Clamda.inv = function(h, k, alpha){
     alpha/k*(1 - exp(-k*h))
   }
 }
+})
